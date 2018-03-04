@@ -1,6 +1,6 @@
-# E-Mail Sender
+I # E-Mail Sender
 
-This is a small console application to send mails over SMTP. 
+This is a small console application to send mails over SMTP. I just tested it with GMail but other providers should work too.
 
 ### Command line parameters
 | Argument  | Description   | Required                                              |         
