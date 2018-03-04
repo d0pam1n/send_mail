@@ -48,20 +48,18 @@ func (mail *Mail) BuildMessage() string {
 
 func main() {
 
-	senderIDPtr := flag.String("sender", "", "The sender of mail.")
-	toIdsPtr := flag.String("receiver", "", "Receiver of the mail. \n Multiple receivers separated by semicolon. \n Mutiple receivers must be within quotes.")
+	senderIDPtr := flag.String("sender", "", "The sender of mail (Required).")
+	toIdsPtr := flag.String("receiver", "", "Receiver of the mail (Required). \r\n Multiple receivers separated by semicolon. \r\n Mutiple receivers must be within quotes.")
 	subjectPtr := flag.String("subject", "", "The subject of the mail")
 	bodyPtr := flag.String("message", "", "The message of the mail")
-	authPasswortPtr := flag.String("password", "", "The password to authenticate to the smtp server")
-	smtpHostname := flag.String("smtp", "", "The hostname of the smtp server")
-	smtpPort := flag.String("port", "", "The port of the smtp server")
+	authPasswortPtr := flag.String("password", "", "The password to authenticate to the smtp server (Required).")
+	smtpHostname := flag.String("smtp", "", "The hostname of the smtp server (Required).")
+	smtpPort := flag.String("port", "", "The port of the smtp server (Required).")
 
 	flag.Parse()
 
 	if *senderIDPtr == "" ||
 		*toIdsPtr == "" ||
-		*subjectPtr == "" ||
-		*bodyPtr == "" ||
 		*authPasswortPtr == "" ||
 		*smtpHostname == "" ||
 		*smtpPort == "" {
