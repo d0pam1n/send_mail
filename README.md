@@ -1,4 +1,4 @@
-I # E-Mail Sender
+# E-Mail Sender
 
 This is a small console application to send mails over SMTP. I just tested it with GMail but other providers should work too.
 
